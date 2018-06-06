@@ -59,7 +59,7 @@ bot.on('message', (msg) => {
 	else if (msg.text.toString().toLowerCase().trim() == proj) {
 		bot.sendMessage(msg.chat.id, "Alec first made a game using GameMaker Studio with his brother, as his brother, Erik, is a graphic designer.\
 		They contributed and made a \'bullet hell\' kind of game which they then posted on Reddit's r/games which got hundreds of downloads. He's currently\
-		messing with Node.JS, REST, and some more API's to make his CRYPTOCURRENCY search faster. As you may know Alec likes to\
+		messing with Node.JS, RestAPI\'s, and some more API's to make his CRYPTOCURRENCY search faster. As you may know Alec likes to\
 		stay fit so he made a chrome extension --REDDUPS-- which notifies him every \'x\' minutes to hydrate and do some pushups, and then stretch in his long terms of sitting\
 		infront of his laptop! Most of this has been done during school on his free time. It\'s a good thing he enjoys this stuff!");
 	} 
@@ -70,7 +70,7 @@ bot.on('message', (msg) => {
 	else if (msg.text.toString().toLowerCase().trim() == red) {
 		bot.sendMessage(msg.chat.id, "You can search for his extension and install it as long as it's not a mobile device. This idea came from having spent long streaks of hours doing projects and homework\
 		for the CS classes he took. Alec told me that he made himself do push-ups every 30 minutes to get up and get the blood flowing, but would often lose track of time. Alarms were a bit inconvenient,\
-		so he took matters into his own hands, and made a chrome extension since he has Chrome always open for Youtube music, or podcasts as he works... I think it's an addiction!");
+		so he took matters into his own hands, and made a Chrome extension since he has Chrome always open for Youtube music, or podcasts as he works... I think it's an addiction!");
 	} 
 	else if (msg.text.toString().toLowerCase().trim() == all) {
 		bot.sendMessage(msg.chat.id, "Here you go!\nALEC\nPROGRAMMING\nPROJECTS\nCRYPTOCURRENCY\nREDDUPS");
