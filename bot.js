@@ -1,4 +1,4 @@
-// JavaScript source code
+﻿// JavaScript source code
 const token = '560473734:AAFLJ33TLQa7yxmI-WwbhdWJ-nBVbAahKw8';
 const request = require('request');
 const teleBot = require('node-telegram-bot-api');
@@ -32,6 +32,10 @@ bot.on('message', (msg) => {
 	var bye = "bye";
 	var crypto = "cryptocurrency";
 	var red = "reddups";
+	var what = "what";
+	var help = "help";
+	var all = "all";
+
 
 	if (msg.text.toString().toLowerCase().indexOf(greetings) === 0) {
 		bot.sendMessage(msg.chat.id, "Hi " + msg.from.first_name + "! My creator asked me to tell you things about him, ALEC, and perhaps if you\'d\
@@ -65,13 +69,21 @@ bot.on('message', (msg) => {
 	} 
 	else if (msg.text.toString().toLowerCase().trim() == red) {
 		bot.sendMessage(msg.chat.id, "You can search for his extension and install it as long as it's not a mobile device. This idea came from having spent long streaks of hours doing projects and homework\
-		for the CS classes he took. Alec told me that he made himself do push-ups every 30 minutes to get up and get the blood flowing, but would often lose track of time. Alarms were a bit inconvenient\
-		, so he took matters into his own hands, and made a chrome extension since he has Chrome always open for Youtube music or podcasts as he works... I think it's an addiction!");
+		for the CS classes he took. Alec told me that he made himself do push-ups every 30 minutes to get up and get the blood flowing, but would often lose track of time. Alarms were a bit inconvenient,\
+		so he took matters into his own hands, and made a chrome extension since he has Chrome always open for Youtube music, or podcasts as he works... I think it's an addiction!");
 	} 
+	else if (msg.text.toString().toLowerCase().trim() == all) {
+		bot.sendMessage(msg.chat.id, "Here you go!\nALEC\nPROGRAMMING\nPROJECTS\nCRYPTOCURRENCY\nREDDUPS");
+	} 
+	else if (msg.text.toString().toLowerCase().trim() == help) {
+		bot.sendMessage(msg.chat.id, "You may have noticed when you said \'hello\' that I capitalized some words. Repeat those words for further details :) do you want ALL keywords for quick access?");
+	} 
+	else if (msg.text.toString().toLowerCase().trim() == what || msg.text.toString().toLowerCase().trim() == "?" || msg.text.toString().toLowerCase().trim() == "commands" || msg.text.toString().toLowerCase().trim() == "instructions") {
+		bot.sendMessage(msg.chat.id, "¯\_(ツ)_/¯ Sorry if I\'m not the most artificially intelligent bot. type 'help' for more direct instructions on how I work!");
+	}
 	else if (msg.text.toString().toLowerCase().trim() == bye) {
 		bot.sendMessage(msg.chat.id, "Bye! It was nice talking to you, " + msg.from.first_name + ".");
 	} 
-
 	else
 		// send a message to the chat acknowledging receipt of their message
 		bot.sendMessage(chatId, 'I didn\'t quite understand that, but \'hello\' might be a good start. :)');
