@@ -79,7 +79,7 @@ bot.on('message', (msg) => {
 		bot.sendMessage(msg.chat.id, "You may have noticed when you said \'hello\' that I capitalized some words. Repeat those words for further details :) do you want ALL keywords for quick access?");
 	} 
 	else if (msg.text.toString().toLowerCase().trim() == what || msg.text.toString().toLowerCase().trim() == "?" || msg.text.toString().toLowerCase().trim() == "commands" || msg.text.toString().toLowerCase().trim() == "instructions") {
-		bot.sendMessage(msg.chat.id, "¯\_(ツ)_/¯ Sorry if I\'m not the most artificially intelligent bot. type 'help' for more direct instructions on how I work!");
+		bot.sendMessage(msg.chat.id, "¯\\_(ツ)_/¯ Sorry if I\'m not the most artificially intelligent bot. type 'help' for more direct instructions on how I work!");
 	}
 	else if (msg.text.toString().toLowerCase().trim() == bye) {
 		bot.sendMessage(msg.chat.id, "Bye! It was nice talking to you, " + msg.from.first_name + ".");
