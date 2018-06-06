@@ -1,5 +1,5 @@
 ﻿// JavaScript source code
-const token = '560473734:AAFLJ33TLQa7yxmI-WwbhdWJ-nBVbAahKw8';
+const token = 'MY_SECRET';
 const request = require('request');
 const teleBot = require('node-telegram-bot-api');
 const bot = new teleBot(token, { polling: true });
