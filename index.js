@@ -1,7 +1,9 @@
+require('dotenv').config();
 var express = require('express');
 var app = express();
 var bodyParser = require('body-parser');
-const axios = require('axios')
+const axios = require('axios');
+
 
 app.use(bodyParser.json()); // for parsing application/json
 app.use(bodyParser.urlencoded({
@@ -22,7 +24,7 @@ app.post('/new-message', function(req, res) {
   // If we've gotten this far, it means that we have received a message containing the word "marco".
   // Respond by hitting the telegram bot API and responding to the approprite chat_id with the word "Polo!!"
   // Remember to use your own API toked instead of the one below  "https://api.telegram.org/bot<your_api_token>/sendMessage"
-  axios.post('https://api.telegram.org/bot560473734:AAFLJ33TLQa7yxmI-WwbhdWJ-nBVbAahKw8/sendMessage', {
+  axios.post(`https://api.telegram.org/${process.env.TELEGRAM_TOKEN}/sendMessage`, {
     chat_id: message.chat.id,
     text: 'Polo!!'
   })
@@ -41,5 +43,5 @@ app.post('/new-message', function(req, res) {
 
 // Finally, start our server
 app.listen(process.env.PORT, function() {
-  console.log('Telegram app listening on port 3000!');
+  console.log('Telegram app listening on port %s!', process.env.PORT);
 });
