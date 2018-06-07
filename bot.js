@@ -89,4 +89,8 @@ bot.on('message', (msg) => {
 		bot.sendMessage(chatId, 'I didn\'t quite understand that, but \'hello\' might be a good start. :)');
 
 
+<<<<<<< HEAD
 });
+=======
+});
+>>>>>>> abccf933f12c65a6d10dec1dd04632a552d604ce
