@@ -11,7 +11,7 @@ app.listen(process.env.PORT, () => {
 
 module.exports = (bot) => { 
   app.post('/new-message', (req, res, next) => {
-    bot.processUpdaet(req.body);
+    bot.processUpdate(req.body);
     res.status(200).json({'message': 'Got your message!'});
   });
 }
