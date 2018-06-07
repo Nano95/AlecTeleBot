@@ -90,3 +90,5 @@ bot.on('message', (msg) => {
 	else
 		bot.sendMessage(chatId, 'I didn\'t quite understand that, but \'hello\' might be a good start. :)');
 });
+
+module.exports = bot;
