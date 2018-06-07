@@ -83,14 +83,7 @@ bot.on('message', (msg) => {
 	}
 	else if (msg.text.toString().toLowerCase().trim() == bye) {
 		bot.sendMessage(msg.chat.id, "Bye! It was nice talking to you, " + msg.from.first_name + ".");
-	} 
+	}
 	else
-		// send a message to the chat acknowledging receipt of their message
 		bot.sendMessage(chatId, 'I didn\'t quite understand that, but \'hello\' might be a good start. :)');
-
-
-<<<<<<< HEAD
 });
-=======
-});
->>>>>>> abccf933f12c65a6d10dec1dd04632a552d604ce
