@@ -90,5 +90,3 @@ bot.on('message', (msg) => {
 
 
 });
-
-bot.message_loop(run_forever = True, source = update_queue);
