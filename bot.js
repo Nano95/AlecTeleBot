@@ -1,10 +1,11 @@
 ﻿// JavaScript source code
+process.env["NTBA_FIX_319"] = 1;
 require('dotenv').config();
 const token = process.env.MY_API;
 // this looks unused
 //const request = require('request');
 const teleBot = require('node-telegram-bot-api');
-const bot = new teleBot(token);
+const bot = new teleBot(token, {polling: true});
 // Polling mode is done so that it's an infinite loop .. always listening
 
 console.log('bot server started...');
