@@ -1,5 +1,5 @@
 ﻿// JavaScript source code
-const token = 'MY_SECRET';
+const token = '560473734:AAFLJ33TLQa7yxmI-WwbhdWJ-nBVbAahKw8';
 const request = require('request');
 const teleBot = require('node-telegram-bot-api');
 const bot = new teleBot(token, { polling: true });
@@ -90,5 +90,3 @@ bot.on('message', (msg) => {
 
 
 });
-
-bot.message_loop(run_forever = True, source = update_queue);
