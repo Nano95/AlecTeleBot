@@ -1,13 +1,11 @@
 ﻿// JavaScript source code
-process.env["NTBA_FIX_319"] = 1;
-const teleBot = require('node-telegram-bot-api');
 require('dotenv').config();
 const token = process.env.MY_API;
-// Polling mode is done so that it's an infinite loop .. always listening
-
+// this looks unused
+//const request = require('request');
+const teleBot = require('node-telegram-bot-api');
 const bot = new teleBot(token);
-bot.setWebHook(process.env.WEB_URL + '/new-message');
-
+// Polling mode is done so that it's an infinite loop .. always listening
 
 console.log('bot server started...');
 
@@ -43,37 +41,37 @@ bot.on('message', (msg) => {
 
 	if (msg.text.toString().toLowerCase().indexOf(greetings) === 0) {
 		bot.sendMessage(msg.chat.id, "Hi " + msg.from.first_name + "! My creator asked me to tell you things about him, ALEC, and perhaps if you\'d\
-	like I can tell you how he got into PROGRAMMING.");
+		like I can tell you how he got into PROGRAMMING.");
 	}
 	else if (msg.text.toString().toLowerCase().trim() == prog) {
 		bot.sendMessage(msg.chat.id, "Alec has always liked puzzles, and numbers. He then begun his CS career by creating a flappy bird clone through a tutorial by Unity\
-	which used C#. Fascinated by how things worked but not quite sure what was truly happening, he began to learn python, and later learned javascript and other languages using codeacademy.com\
-	and moved onto different languages afterwards. Later he went back to the flappy bird tutorial and everything made sense that time. It was then that he knew how fascinating\
-	all of these 1's and 0's are. I\'m glad because I would not be alive was it not for said passion.");
+		which used C#. Fascinated by how things worked but not quite sure what was truly happening, he began to learn python, and later learned javascript and other languages using codeacademy.com\
+		and moved onto different languages afterwards. Later he went back to the flappy bird tutorial and everything made sense that time. It was then that he knew how fascinating\
+		all of these 1's and 0's are. I\'m glad because I would not be alive was it not for said passion.");
 
 	}
 	else if (msg.text.toString().toLowerCase().trim() == alec) {
 		bot.sendMessage(msg.chat.id, "Alec moved to Texas when he was 10 years old from Mexico. He loves Soccer and\
-	long walks on the be-- I promised i wouldn't joke about that, sorry. He does enjoy learning,\
-	playing guitar, reading, and game development; all while maintaining physical health. He's currently working on\
-	some other PROJECTS as well! All in all, he's a good-natured guy whose committed to being\
-	successful in his present affairs. Also, he finally graduates at the end of this summer!");
+		long walks on the be-- I promised i wouldn't joke about that, sorry. He does enjoy learning,\
+		playing guitar, reading, and game development; all while maintaining physical health. He's currently working on\
+		some other PROJECTS as well! All in all, he's a good-natured guy whose committed to being\
+		successful in his present affairs. Also, he finally graduates at the end of this summer!");
 	}
 	else if (msg.text.toString().toLowerCase().trim() == proj) {
 		bot.sendMessage(msg.chat.id, "Alec first made a game using GameMaker Studio with his brother, as his brother, Erik, is a graphic designer.\
-	They contributed and made a \'bullet hell\' kind of game which they then posted on Reddit's r/games which got hundreds of downloads. He's currently\
-	messing with Node.JS, RestAPI\'s, and some more API's to make his CRYPTOCURRENCY search faster. As you may know Alec likes to\
-	stay fit so he made a chrome extension --REDDUPS-- which notifies him every \'x\' minutes to hydrate and do some pushups, and then stretch in his long terms of sitting\
-	infront of his laptop! Most of this has been done during school on his free time. It\'s a good thing he enjoys this stuff!");
+		They contributed and made a \'bullet hell\' kind of game which they then posted on Reddit's r/games which got hundreds of downloads. He's currently\
+		messing with Node.JS, RestAPI\'s, and some more API's to make his CRYPTOCURRENCY search faster. As you may know Alec likes to\
+		stay fit so he made a chrome extension --REDDUPS-- which notifies him every \'x\' minutes to hydrate and do some pushups, and then stretch in his long terms of sitting\
+		infront of his laptop! Most of this has been done during school on his free time. It\'s a good thing he enjoys this stuff!");
 	}
 	else if (msg.text.toString().toLowerCase().trim() == crypto) {
 		bot.sendMessage(msg.chat.id, "This is currently what he is working on: https://my-crypto-search.herokuapp.com/ '\working\' being the key-word ;) If you\
-	are also into cryptocurrencies, you can type in your cryptocurrency\'s symbol as a query parameter to see it's value! ex: ?symbol=btc");
+		are also into cryptocurrencies, you can type in your cryptocurrency\'s symbol as a query parameter to see it's value! ex: ?symbol=btc");
 	}
 	else if (msg.text.toString().toLowerCase().trim() == red) {
 		bot.sendMessage(msg.chat.id, "You can search for his extension and install it as long as it's not a mobile device. This idea came from having spent long streaks of hours doing projects and homework\
-	for the CS classes he took. Alec told me that he made himself do push-ups every 30 minutes to get up and get the blood flowing, but would often lose track of time. Alarms were a bit inconvenient,\
-	so he took matters into his own hands, and made a Chrome extension since he has Chrome always open for Youtube music, or podcasts as he works... I think it's an addiction!");
+		for the CS classes he took. Alec told me that he made himself do push-ups every 30 minutes to get up and get the blood flowing, but would often lose track of time. Alarms were a bit inconvenient,\
+		so he took matters into his own hands, and made a Chrome extension since he has Chrome always open for Youtube music, or podcasts as he works... I think it's an addiction!");
 	}
 	else if (msg.text.toString().toLowerCase().trim() == all) {
 		bot.sendMessage(msg.chat.id, "Here you go!\nALEC\nPROGRAMMING\nPROJECTS\nCRYPTOCURRENCY\nREDDUPS");
@@ -90,4 +88,3 @@ bot.on('message', (msg) => {
 	else
 		bot.sendMessage(chatId, 'I didn\'t quite understand that, but \'hello\' might be a good start. :)');
 });
-module.exports = bot;
