@@ -8,6 +8,14 @@ const teleBot = require('node-telegram-bot-api');
 const bot = new teleBot(token, {polling: true});
 // Polling mode is done so that it's an infinite loop .. always listening
 
+const tg = new Telegram.Telegram(token, {
+	webhook: {
+		"url": WEB_URL,
+		"port": 3000,
+		"host": "localhost"
+	}
+});
+
 console.log('bot server started...');
 
 // text listener
