@@ -5,7 +5,7 @@ const token = process.env.TELEGRAM_TOKEN;
 //const request = require('request');
 const teleBot = require('node-telegram-bot-api');
 const bot = new teleBot(token);
-bot.setWebHool(process.env.WEB_URL + '/new-message');
+bot.setWebHook(process.env.WEB_URL + '/new-message');
 // Polling mode is done so that it's an infinite loop .. always listening
 
 console.log('bot server started...');
