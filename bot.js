@@ -1,4 +1,5 @@
 ﻿// JavaScript source code
+process.env["NTBA_FIX_319"] = 1;
 const request = require('request');
 const teleBot = require('node-telegram-bot-api');
 require('dotenv').config();
