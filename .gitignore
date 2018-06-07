@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Compiled source #
 ###################
 *.com
@@ -35,3 +36,12 @@
 .Trashes
 ehthumbs.db
 Thumbs.db
+=======
+node_modules
+.env
+shrinkwrap.yaml
+>>>>>>> daeb05135dcac7e4ccdfff6132d865aef4507f88
+.gitignore
+bot.js
+index.js
+package.json
