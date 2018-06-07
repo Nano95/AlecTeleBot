@@ -1,9 +1,13 @@
 ﻿// JavaScript source code
-const token = '560473734:AAFLJ33TLQa7yxmI-WwbhdWJ-nBVbAahKw8';
 const request = require('request');
 const teleBot = require('node-telegram-bot-api');
+require('dotenv').config();
+const token = process.env.MY_API;
 const bot = new teleBot(token, { polling: true });
 // Polling mode is done so that it's an infinite loop .. always listening
+
+
+
 
 console.log('bot server started...');
 

@@ -2,6 +2,7 @@ var express = require('express');
 var app = express();
 var bodyParser = require('body-parser');
 const axios = require('axios')
+require('dotenv').config();
 
 app.use(bodyParser.json()); // for parsing application/json
 app.use(bodyParser.urlencoded({
@@ -19,9 +20,7 @@ app.post('/new-message', function(req, res) {
     return res.end()
   }
 
-  // If we've gotten this far, it means that we have received a message containing the word "marco".
-  // Respond by hitting the telegram bot API and responding to the approprite chat_id with the word "Polo!!"
-  // Remember to use your own API toked instead of the one below  "https://api.telegram.org/bot<your_api_token>/sendMessage"
+  var url = 'https://api.telegram.org/bot' + process.env.MY_API + '/sendMessage';
   axios.post('https://api.telegram.org/bot560473734:AAFLJ33TLQa7yxmI-WwbhdWJ-nBVbAahKw8/sendMessage', {
     chat_id: message.chat.id,
     text: 'Polo!!'
