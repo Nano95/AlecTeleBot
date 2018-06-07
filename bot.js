@@ -3,7 +3,6 @@ process.env["NTBA_FIX_319"] = 1;
 const teleBot = require('node-telegram-bot-api');
 require('dotenv').config();
 const token = process.env.TELEGRAM_TOKEN;
-const bot = new teleBot(token);
 // Polling mode is done so that it's an infinite loop .. always listening
 
 const bot = new teleBot(token);
