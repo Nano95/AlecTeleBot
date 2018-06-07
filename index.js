@@ -21,7 +21,7 @@ app.post('/new-message', function(req, res) {
   }
 
   var url = 'https://api.telegram.org/bot' + process.env.MY_API + '/sendMessage';
-  axios.post('https://api.telegram.org/bot560473734:AAFLJ33TLQa7yxmI-WwbhdWJ-nBVbAahKw8/sendMessage', {
+  axios.post(url, {
     chat_id: message.chat.id,
     text: 'Polo!!'
   })
